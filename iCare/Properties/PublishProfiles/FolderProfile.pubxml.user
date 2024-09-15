@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Publish</_PublishTargetUrl>
+    <History>True|2024-07-23T13:11:56.1455680Z;True|2024-07-23T18:24:52.0322169+05:30;True|2024-06-10T11:39:22.3942457+05:30;True|2024-06-07T22:00:25.2915010+05:30;True|2024-06-07T21:24:08.9846699+05:30;True|2024-06-07T21:02:35.0653891+05:30;True|2024-06-07T20:49:08.8210664+05:30;True|2024-06-07T20:26:46.0925983+05:30;True|2024-06-05T10:45:56.1017207+05:30;True|2024-06-05T10:21:29.1684937+05:30;True|2024-06-04T15:33:03.4312060+05:30;True|2024-06-04T14:48:31.0163748+05:30;True|2024-06-04T14:21:35.7648932+05:30;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="ICare">
+      <Value>Server=.%3bDatabase=iCare%3bIntegrated Security=True%3bTrusted_Connection=True%3bTrustServerCertificate=True%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

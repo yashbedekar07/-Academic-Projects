@@ -1,0 +1,73 @@
+﻿@model iCare.Models.User
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center">Login Details</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Login Details</h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-4 text-muted">Username:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Username)</dd>
+                        <dt class="col-sm-4 text-muted">Password:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Password)</dd>
+                        <dt class="col-sm-4 text-muted">Role:</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Role)</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="mt-3">
+                <a href="@Url.Action("Edit", new { id = Model?.Id })" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</a>
+                <a href="@Url.Action("Index")" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Back to List</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Confirmation Modal -->
+<div class="modal fade" id="confirmEditModal" tabindex="-1" role="dialog" aria-labelledby="confirmEditModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmEditModalLabel"><i class="fas fa-exclamation-circle"></i> Confirm Edit</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to edit this glass details?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button id="confirmEditButton" type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Continue</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#editButton").click(function () {
+                $('#confirmEditModal').modal('show');
+            });
+
+            $("#confirmEditButton").click(function () {
+                window.location.href = '@Url.Action("Edit", "Users", new { id = Model?.Id })';
+            });
+
+            // Handle Cancel button click to close the modal
+            $("#confirmEditModal").on("hide.bs.modal", function () {
+                $(this).data("bs.modal", null);
+            });
+        });
+    </script>
+}

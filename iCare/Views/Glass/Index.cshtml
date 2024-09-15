@@ -1,0 +1,156 @@
+﻿@model IPagedList<iCare.Models.Glass>
+@using X.PagedList;
+@using X.PagedList.Mvc.Core;
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .custom-heading {
+            font-style: italic;
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: #e9ecef;
+        }
+
+        .thead-light th {
+            background-color: #dee2e6;
+            border-color: #ced4da;
+        }
+
+        .input-group .form-control {
+            border-right: 0;
+        }
+
+        .input-group .input-group-append .btn {
+            border-left: 0;
+        }
+
+        .btn-success, .btn-primary, .btn-info, .btn-danger {
+            margin-right: 5px;
+        }
+
+        .pagination-container {
+            margin-top: 20px;
+        }
+
+            .pagination-container .card {
+                background: transparent;
+                border: none;
+            }
+
+                .pagination-container .card .card-body {
+                    padding: 0;
+                }
+
+            .pagination-container .pagination {
+                margin-bottom: 0;
+            }
+
+            .pagination-container .page-link {
+                color: #007bff;
+                border: 1px solid #dee2e6;
+            }
+
+                .pagination-container .page-link:hover {
+                    background-color: #e9ecef;
+                    border-color: #dee2e6;
+                }
+
+            .pagination-container .active .page-link {
+                background-color: #007bff;
+                border-color: #007bff;
+                color: #fff;
+            }
+    </style>
+</head>
+
+<h1 class="text-center custom-heading"><i class="fas fa-glasses"></i> Glasses Records</h1>
+
+<div class="row mb-3">
+    <div class="col-md-6">
+        <a class="btn btn-success" asp-action="Create">
+            <i class="fas fa-plus"></i> Create New
+        </a>
+    </div>
+    <div class="col-md-6">
+        <form asp-action="Index" method="get" class="form-inline float-right">
+            <div class="input-group mb-2">
+                <input type="text" name="searchString" class="form-control" placeholder="Search by Glass Type" value="@ViewData["CurrentFilter"]" />
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary mb-2"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<table class="table table-hover">
+    <thead class="thead-light">
+        <tr>
+            <th>S/N</th>
+            <th>@Html.DisplayNameFor(model => model.First().GlassType)</th>
+            <th>@Html.DisplayNameFor(model => model.First().Description)</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Select((glass, index) => new { glass, index }))
+        {
+            <tr>
+                <td>@(item.index + 1 + (Model.PageNumber - 1) * Model.PageSize)</td>
+                <td>@Html.DisplayFor(modelItem => item.glass.GlassType)</td>
+                <td>@Html.DisplayFor(modelItem => item.glass.Description)</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" asp-action="Edit" asp-route-id="@item.glass.GlassId">
+                        <i class="fas fa-edit"></i>Edit
+                    </a>
+                    <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.glass.GlassId">
+                        <i class="fas fa-info-circle"></i>Views
+                    </a>
+                    <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.glass.GlassId">
+                        <i class="fas fa-trash-alt"></i>Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="pagination-container">
+    <div class="card shadow-sm" style="border-radius: 10px;">
+        <div class="card-body" style="background: transparent; color: black;">
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page, searchString = ViewData["CurrentFilter"] }), new PagedListRenderOptions
+       {
+           UlElementClasses = new[] { "pagination justify-content-center" },
+           LiElementClasses = new[] { "page-item" },
+           PageClasses = new[] { "page-link" },
+           ActiveLiElementClass = "active",
+           DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+           DisplayLinkToNextPage = PagedListDisplayMode.Always,
+           DisplayLinkToFirstPage = PagedListDisplayMode.Always,
+           DisplayLinkToLastPage = PagedListDisplayMode.Always,
+           DisplayLinkToIndividualPages = true,
+           DisplayPageCountAndCurrentLocation = false,
+           MaximumPageNumbersToDisplay = 5,
+           LinkToPreviousPageFormat = "Previous",
+           LinkToNextPageFormat = "Next",
+           LinkToFirstPageFormat = "First",
+           LinkToLastPageFormat = "Last"
+       })
+        </div>
+    </div>
+</div>

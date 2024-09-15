@@ -1,0 +1,74 @@
+﻿@model iCare.Models.Glass
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center custom-heading"><i class="fas fa-glasses"></i> Add New Glass</h1>
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form id="createForm" asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="GlassType" class="control-label">Glass Type</label>
+                    <input asp-for="GlassType" class="form-control" />
+                    <span asp-validation-for="GlassType" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label">Description</label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success"><i class="fas fa-plus"></i> Submit</button>
+                    <a asp-action="Index" class="btn btn-danger"><i class="fas fa-arrow-left"></i> Back to List</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel"><i class="fas fa-check-circle"></i> Success!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Your glass detail has been successfully added.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="continueButton">Continue</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#createForm').submit(function (event) {
+            event.preventDefault(); // Prevent form submission
+            $('#successModal').modal('show'); // Show success modal
+        });
+
+        // Redirect to index page when "Continue" button is clicked
+        $('#continueButton').click(function () {
+            window.location.href = '@Url.Action("Index", "GlassDetail")'; // Replace 'YourControllerName' with the actual controller name
+        });
+
+        // Trigger form submission after success modal is shown
+        $('#successModal').on('shown.bs.modal', function () {
+            $('#createForm').unbind('submit').submit(); // Unbind previous submit event and submit the form
+        });
+    });
+</script>
