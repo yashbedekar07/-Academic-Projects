@@ -1,0 +1,14 @@
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Exception-Handling\bin\Debug\net8.0\Exception-Handling.exe
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Exception-Handling\bin\Debug\net8.0\Exception-Handling.deps.json
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Exception-Handling\bin\Debug\net8.0\Exception-Handling.runtimeconfig.json
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Exception-Handling\bin\Debug\net8.0\Exception-Handling.dll
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Exception-Handling\bin\Debug\net8.0\Exception-Handling.pdb
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Exception-Handling\obj\Debug\net8.0\Exception-Handling.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Exception-Handling\obj\Debug\net8.0\Exception-Handling.AssemblyInfoInputs.cache
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Exception-Handling\obj\Debug\net8.0\Exception-Handling.AssemblyInfo.cs
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Exception-Handling\obj\Debug\net8.0\Exception-Handling.csproj.CoreCompileInputs.cache
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Exception-Handling\obj\Debug\net8.0\Exception-Handling.dll
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Exception-Handling\obj\Debug\net8.0\refint\Exception-Handling.dll
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Exception-Handling\obj\Debug\net8.0\Exception-Handling.pdb
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Exception-Handling\obj\Debug\net8.0\Exception-Handling.genruntimeconfig.cache
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Exception-Handling\obj\Debug\net8.0\ref\Exception-Handling.dll
