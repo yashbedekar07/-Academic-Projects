@@ -1,0 +1,14 @@
+C:\Users\Yash\source\repos\stringbuilder\bin\Debug\net8.0\stringbuilder.exe
+C:\Users\Yash\source\repos\stringbuilder\bin\Debug\net8.0\stringbuilder.deps.json
+C:\Users\Yash\source\repos\stringbuilder\bin\Debug\net8.0\stringbuilder.runtimeconfig.json
+C:\Users\Yash\source\repos\stringbuilder\bin\Debug\net8.0\stringbuilder.dll
+C:\Users\Yash\source\repos\stringbuilder\bin\Debug\net8.0\stringbuilder.pdb
+C:\Users\Yash\source\repos\stringbuilder\obj\Debug\net8.0\stringbuilder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yash\source\repos\stringbuilder\obj\Debug\net8.0\stringbuilder.AssemblyInfoInputs.cache
+C:\Users\Yash\source\repos\stringbuilder\obj\Debug\net8.0\stringbuilder.AssemblyInfo.cs
+C:\Users\Yash\source\repos\stringbuilder\obj\Debug\net8.0\stringbuilder.csproj.CoreCompileInputs.cache
+C:\Users\Yash\source\repos\stringbuilder\obj\Debug\net8.0\stringbuilder.dll
+C:\Users\Yash\source\repos\stringbuilder\obj\Debug\net8.0\refint\stringbuilder.dll
+C:\Users\Yash\source\repos\stringbuilder\obj\Debug\net8.0\stringbuilder.pdb
+C:\Users\Yash\source\repos\stringbuilder\obj\Debug\net8.0\stringbuilder.genruntimeconfig.cache
+C:\Users\Yash\source\repos\stringbuilder\obj\Debug\net8.0\ref\stringbuilder.dll

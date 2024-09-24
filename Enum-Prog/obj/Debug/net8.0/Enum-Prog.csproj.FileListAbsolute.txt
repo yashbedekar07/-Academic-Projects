@@ -1,0 +1,14 @@
+C:\Users\Yash\source\repos\Enum-Prog\bin\Debug\net8.0\Enum-Prog.exe
+C:\Users\Yash\source\repos\Enum-Prog\bin\Debug\net8.0\Enum-Prog.deps.json
+C:\Users\Yash\source\repos\Enum-Prog\bin\Debug\net8.0\Enum-Prog.runtimeconfig.json
+C:\Users\Yash\source\repos\Enum-Prog\bin\Debug\net8.0\Enum-Prog.dll
+C:\Users\Yash\source\repos\Enum-Prog\bin\Debug\net8.0\Enum-Prog.pdb
+C:\Users\Yash\source\repos\Enum-Prog\obj\Debug\net8.0\Enum-Prog.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yash\source\repos\Enum-Prog\obj\Debug\net8.0\Enum-Prog.AssemblyInfoInputs.cache
+C:\Users\Yash\source\repos\Enum-Prog\obj\Debug\net8.0\Enum-Prog.AssemblyInfo.cs
+C:\Users\Yash\source\repos\Enum-Prog\obj\Debug\net8.0\Enum-Prog.csproj.CoreCompileInputs.cache
+C:\Users\Yash\source\repos\Enum-Prog\obj\Debug\net8.0\Enum-Prog.dll
+C:\Users\Yash\source\repos\Enum-Prog\obj\Debug\net8.0\refint\Enum-Prog.dll
+C:\Users\Yash\source\repos\Enum-Prog\obj\Debug\net8.0\Enum-Prog.pdb
+C:\Users\Yash\source\repos\Enum-Prog\obj\Debug\net8.0\Enum-Prog.genruntimeconfig.cache
+C:\Users\Yash\source\repos\Enum-Prog\obj\Debug\net8.0\ref\Enum-Prog.dll
