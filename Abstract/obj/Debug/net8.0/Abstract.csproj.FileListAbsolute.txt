@@ -1,0 +1,14 @@
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Abstract\bin\Debug\net8.0\Abstract.exe
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Abstract\bin\Debug\net8.0\Abstract.deps.json
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Abstract\bin\Debug\net8.0\Abstract.runtimeconfig.json
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Abstract\bin\Debug\net8.0\Abstract.dll
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Abstract\bin\Debug\net8.0\Abstract.pdb
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Abstract\obj\Debug\net8.0\Abstract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Abstract\obj\Debug\net8.0\Abstract.AssemblyInfoInputs.cache
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Abstract\obj\Debug\net8.0\Abstract.AssemblyInfo.cs
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Abstract\obj\Debug\net8.0\Abstract.csproj.CoreCompileInputs.cache
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Abstract\obj\Debug\net8.0\Abstract.dll
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Abstract\obj\Debug\net8.0\refint\Abstract.dll
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Abstract\obj\Debug\net8.0\Abstract.pdb
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Abstract\obj\Debug\net8.0\Abstract.genruntimeconfig.cache
+C:\Users\Yash\source\repos\Intership-Pratice-Question\Abstract\obj\Debug\net8.0\ref\Abstract.dll
