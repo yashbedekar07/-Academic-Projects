@@ -1,0 +1,269 @@
+﻿@model RakesModules.Models.Rake
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE >
+<html>
+<head>
+    <title>Create</title>
+    <!-- Include necessary CSS and JS libraries -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Update Rakes Details</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="Edit" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <!-- Newly inserted form rows -->
+                <div class="form-row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="Rrno" class="control-label"></label>
+                            <input asp-for="Rrno" class="form-control" />
+                            <span asp-validation-for="Rrno" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="Rrdate" class="control-label"></label>
+                            <input asp-for="Rrdate" class="form-control" />
+                            <span asp-validation-for="Rrdate" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="Fnr" class="control-label"></label>
+                            <input asp-for="Fnr" class="form-control" />
+                            <span asp-validation-for="Fnr" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <!-- Add more columns as needed -->
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="ProductId" class="control-label"></label>
+                            <select asp-for="ProductId" class="form-control" asp-items="ViewBag.ProductId"></select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="ConsignorId" class="control-label"></label>
+                            <select asp-for="ConsignorId" class="form-control" asp-items="ViewBag.ConsignorId"></select>
+                        </div>
+                    </div>
+                    <!-- Add more columns as needed -->
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="NoOfWagons" class="control-label"></label>
+                            <input asp-for="NoOfWagons" class="form-control" />
+                            <span asp-validation-for="NoOfWagons" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="TotalWeight" class="control-label"></label>
+                            <input asp-for="TotalWeight" class="form-control" />
+                            <span asp-validation-for="TotalWeight" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="Rate" class="control-label"></label>
+                            <input asp-for="Rate" class="form-control" />
+                            <span asp-validation-for="Rate" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="SenderWeight" class="control-label"></label>
+                            <input asp-for="SenderWeight" class="form-control" />
+                            <span asp-validation-for="SenderWeight" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="TotalChargableWeight" class="control-label"></label>
+                            <input asp-for="TotalChargableWeight" class="form-control" />
+                            <span asp-validation-for="TotalChargableWeight" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="TotalArticles" class="control-label"></label>
+                            <input asp-for="TotalArticles" class="form-control" />
+                            <span asp-validation-for="TotalArticles" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="FreightAmt" class="control-label"></label>
+                            <input asp-for="FreightAmt" class="form-control" />
+                            <span asp-validation-for="FreightAmt" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="TypeOfRake" class="control-label"></label>
+                            <input asp-for="TypeOfRake" class="form-control" />
+                            <span asp-validation-for="TypeOfRake" class="text-danger"></span>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="SpilageBags" class="control-label"></label>
+                            <input asp-for="SpilageBags" class="form-control" />
+                            <span asp-validation-for="SpilageBags" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="CutAndTornBags" class="control-label"></label>
+                            <input asp-for="CutAndTornBags" class="form-control" />
+                            <span asp-validation-for="CutAndTornBags" class="text-danger"></span>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="Bag1Weight" class="control-label"></label>
+                            <input asp-for="Bag1Weight" class="form-control" />
+                            <span asp-validation-for="Bag1Weight" class="text-danger"></span>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="Bag2Weight" class="control-label"></label>
+                            <input asp-for="Bag2Weight" class="form-control" />
+                            <span asp-validation-for="Bag2Weight" class="text-danger"></span>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="Bag3Weight" class="control-label"></label>
+                            <input asp-for="Bag3Weight" class="form-control" />
+                            <span asp-validation-for="Bag3Weight" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="Bag4Weight" class="control-label"></label>
+                            <input asp-for="Bag4Weight" class="form-control" />
+                            <span asp-validation-for="Bag4Weight" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="Bag5Weight" class="control-label"></label>
+                            <input asp-for="Bag5Weight" class="form-control" />
+                            <span asp-validation-for="Bag5Weight" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="Bag6Weight" class="control-label"></label>
+                            <input asp-for="Bag6Weight" class="form-control" />
+                            <span asp-validation-for="Bag6Weight" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="Bag7Weight" class="control-label"></label>
+                            <input asp-for="Bag7Weight" class="form-control" />
+                            <span asp-validation-for="Bag7Weight" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="Bag8Weight" class="control-label"></label>
+                            <input asp-for="Bag8Weight" class="form-control" />
+                            <span asp-validation-for="Bag8Weight" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="Bag9Weight" class="control-label"></label>
+                            <input asp-for="Bag9Weight" class="form-control" />
+                            <span asp-validation-for="Bag9Weight" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="Bag10Weight" class="control-label"></label>
+                            <input asp-for="Bag10Weight" class="form-control" />
+                            <span asp-validation-for="Bag10Weight" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="Mrp1" class="control-label"></label>
+                            <input asp-for="Mrp1" class="form-control" />
+                            <span asp-validation-for="Mrp1" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="Mrp2" class="control-label"></label>
+                            <input asp-for="Mrp2" class="form-control" />
+                            <span asp-validation-for="Mrp2" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="Mrp3" class="control-label"></label>
+                            <input asp-for="Mrp3" class="form-control" />
+                            <span asp-validation-for="Mrp3" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="CompletionDate" class="control-label"></label>
+                            <input asp-for="CompletionDate" class="form-control" />
+                            <span asp-validation-for="CompletionDate" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label asp-for="ArrivalDate" class="control-label"></label>
+                            <input asp-for="ArrivalDate" class="form-control" />
+                            <span asp-validation-for="ArrivalDate" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <!-- End of newly inserted form rows -->
+
+                    <div class="form-row">
+                        <!-- Continue with existing form elements -->
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-icon">
+                            <i class="fas fa-save mr-1"></i> Update
+                        </button>
+                        <a asp-action="Index" class="btn btn-danger btn-icon">
+                            <i class="fas fa-arrow-left mr-1"></i> Back to List
+                        </a>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Include necessary JS libraries -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
