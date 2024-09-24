@@ -1,0 +1,72 @@
+﻿@model MyFitness.Models.Domain.HomeViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid py-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-4 mb-12">
+            <div class="card text-center bg-primary text-white hover-effect">
+                <div class="card-body">
+                    <h3 class="card-title">Rakes</h3>
+                    <p class="card-text">
+                        <img src="~/assets/img/Rakes.png" alt="Train Image" style="width: 100px; height: 100px;">
+                    </p>
+                    <p class="card-text">Total: @Model.MembersCount</p>
+                    <a href="@Url.Action("Index", "Members")" class="btn btn-light">View Rakes</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-12">
+            <div class="card text-center bg-success text-white hover-effect">
+                <div class="card-body">
+                    <h3 class="card-title">Wagons</h3>
+                    <p class="card-text">
+                        <img src="~/assets/img/Wagons.png" alt="Wagons Image" style="width: 100px; height: 100px;">
+                    </p>
+                    <p class="card-text">Total: @Model.TrainersCount</p>
+                    <a href="@Url.Action("Index", "Trainers")" class="btn btn-light">View Wagons</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-12">
+            <div class="card text-center bg-danger text-white hover-effect">
+                <div class="card-body">
+                    <h3 class="card-title">Despatches</h3>
+                    <p class="card-text">
+                        <img src="~/assets/img/Despatches.png" alt="Despatches Image" style="width: 100px; height: 100px;">
+                    </p>
+                    <p class="card-text">Total: @Model.MembershipsCount</p>
+                    <a href="@Url.Action("Index", "Memberships")" class="btn btn-light">View Despatches</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        @* <div class="col-md-4 mb-12">
+            <div class="card text-center bg-warning text-white hover-effect">
+                <div class="card-body">
+                    <h3 class="card-title">Membership Types</h3>
+                    <p class="card-text"><i class="fas fa-tags fa-3x"></i></p>
+                    <p class="card-text">Total: @Model.MembershipTypesCount</p>
+                    <a href="@Url.Action("Index", "MembershipTypes")" class="btn btn-light">View Membership Types</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4 mb-12">
+            <div class="card text-center bg-info text-white hover-effect">
+                <div class="card-body">
+                    <h3 class="card-title">Equipment</h3>
+                    <p class="card-text"><i class="fas fa-dumbbell fa-3x"></i></p>
+                    <p class="card-text">Total: @Model.EquipmentCount</p>
+                    <a href="@Url.Action("Index", "Equipments")" class="btn btn-light">View Equipment</a>
+                </div>
+            </div>
+        </div> *@
+    </div>
+</div>

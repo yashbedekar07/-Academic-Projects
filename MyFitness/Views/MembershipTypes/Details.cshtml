@@ -1,0 +1,40 @@
+﻿@model MyFitness.Models.Domain.MembershipType
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h1>MembershipType Details</h1>
+
+<div class="row">
+    <div class="col-12">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TypeName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TypeName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+    </dl>
+</div>
+    <div>
+        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.MembershipTypeId">
+            <i class="fas fa-pencil-alt">
+            </i>
+            Edit
+        </a>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
