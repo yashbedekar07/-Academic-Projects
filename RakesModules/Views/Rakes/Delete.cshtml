@@ -1,0 +1,124 @@
+﻿@model RakesModules.Models.Rake
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Include necessary CSS and JS libraries -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+    .card {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .card-header {
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #ccc;
+        font-weight: bold;
+        font-size:27px;
+    }
+
+    .card-body {
+        padding: 0;
+    }
+
+    .btn-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .btn-delete {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    .btn-back {
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-left: 10px;
+    }
+</style>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header" align="center">Delete Rakes ?</div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-2 font-weight-bold">Rake Number:</div>
+                <div class="col-sm-5">@Html.DisplayFor(model => model.Rrno)</div>
+                <div class="col-sm-2 font-weight-bold">Rake Date:</div>
+                <div class="col-sm-3">@Html.DisplayFor(model => model.Rrdate)</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2 font-weight-bold">FNR:</div>
+                <div class="col-sm-5">@Html.DisplayFor(model => model.Fnr)</div>
+                <div class="col-sm-2 font-weight-bold">Wagons Count:</div>
+                <div class="col-sm-3">@Html.DisplayFor(model => model.NoOfWagons)</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2 font-weight-bold">Consignor:</div>
+                <div class="col-sm-5">@Html.DisplayFor(model => model.Consignor.Name)</div>
+                <div class="col-sm-2 font-weight-bold">Product:</div>
+                <div class="col-sm-3">@Html.DisplayFor(model => model.Product.ProductName)</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2 font-weight-bold">Total Weight:</div>
+                <div class="col-sm-5">@Html.DisplayFor(model => model.TotalWeight)</div>
+                <div class="col-sm-2 font-weight-bold">Rate:</div>
+                <div class="col-sm-3">@Html.DisplayFor(model => model.Rate)</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2 font-weight-bold">Sender Weight:</div>
+                <div class="col-sm-5">@Html.DisplayFor(model => model.SenderWeight)</div>
+                <div class="col-sm-2 font-weight-bold">Weight Chnages:</div>
+                <div class="col-sm-3">@Html.DisplayFor(model => model.TotalChargableWeight)</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2 font-weight-bold">Total Articals:</div>
+                <div class="col-sm-5">@Html.DisplayFor(model => model.TotalArticles)</div>
+                <div class="col-sm-2 font-weight-bold">Freight Amount:</div>
+                <div class="col-sm-3">@Html.DisplayFor(model => model.FreightAmt)</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2 font-weight-bold">Rakes Types:</div>
+                <div class="col-sm-5">@Html.DisplayFor(model => model.TypeOfRake)</div>
+                <div class="col-sm-2 font-weight-bold">Spilage Bags:</div>
+                <div class="col-sm-3">@Html.DisplayFor(model => model.SpilageBags)</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2 font-weight-bold">Cut and Torn Bags:</div>
+                <div class="col-sm-5">@Html.DisplayFor(model => model.CutAndTornBags)</div>
+                <div class="col-sm-2 font-weight-bold">MRP:</div>
+                <div class="col-sm-3">@Html.DisplayFor(model => model.Mrp1)</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2 font-weight-bold">Completion Date:</div>
+                <div class="col-sm-5">@Html.DisplayFor(model => model.CompletionDate)</div>
+                <div class="col-sm-2 font-weight-bold">Arrival Date:</div>
+                <div class="col-sm-3">@Html.DisplayFor(model => model.ArrivalDate)</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-container">
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="btn btn-danger btn-delete">
+                <i class="fas fa-trash-alt"></i> Delete
+            </button>
+            <a asp-action="Index" class="btn btn-secondary btn-back">
+                <i class="fas fa-arrow-left"></i> Back to List
+            </a>
+        </form>
+    </div>
+</div>
+
+<!-- Include necessary JS libraries -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

@@ -1,0 +1,47 @@
+﻿@model RakesModules.Models.Home
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="container-fluid py-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-4 mb-12">
+            <div class="card text-center bg-primary text-white hover-effect">
+                <div class="card-body">
+                    <h3 class="card-title">Rakes</h3>
+                    <p class="card-text">
+                        <img src="~/assets/img/Rakes.png" alt="Train Image" style="width: 100px; height: 100px;">
+                    </p>
+                    @*                     <p class="card-text">Total: @Model.RakesCount</p>
+                    *@                    <a href="@Url.Action("Index", "Rakes")" class="btn btn-light">View Rakes</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-12">
+            <div class="card text-center bg-success text-white hover-effect">
+                <div class="card-body">
+                    <h3 class="card-title">Wagons</h3>
+                    <p class="card-text">
+                        <img src="~/assets/img/Wagons.png" alt="Wagons Image" style="width: 100px; height: 100px;">
+                    </p>
+                    @*                     <p class="card-text">Total: @(Model != null ? Model.WagonsCount : 0)</p>
+                    *@                    <a href="@Url.Action("Index", "Wagons")" class="btn btn-light">View Wagons</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-12">
+            <div class="card text-center bg-danger text-white hover-effect">
+                <div class="card-body">
+                    <h3 class="card-title">Despatches</h3>
+                    <p class="card-text">
+                        <img src="~/assets/img/Despatches.png" alt="Despatches Image" style="width: 100px; height: 100px;">
+                    </p>
+                    @*                     <p class="card-text">Total: @(Model != null ? Model.DespatchesCount : 0)</p>
+                    *@                    <a href="@Url.Action("Index", "Despatches")" class="btn btn-light">View Despatches</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

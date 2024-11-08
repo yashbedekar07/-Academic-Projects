@@ -1,0 +1,103 @@
+﻿@model IEnumerable<RakesModules.Models.Rake>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Rakes Informations</h1>
+<p>
+    <a asp-action="Create" class="btn btn-success"><i class="fas fa-plus"> Add New Rake</a></i>
+</p>
+<div class="card-body p-0">
+    <table class="table table-striped projects">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Rrno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rrdate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fnr)
+           
+            <th>
+                @Html.DisplayNameFor(model => model.TypeOfRake)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.CompletionDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArrivalDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Consignor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product)
+            </th>
+            <th>View</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rrno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rrdate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fnr)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeOfRake)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.CompletionDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArrivalDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Consignor.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.ProductName)
+            </td>
+                    <td class="project-actions text-right">
+                        <a class="btn btn-dark-yellow btn-sm" style="color: white;" asp-action="Details" asp-route-id="@item.Id">
+                            <i class="fas fa-eye"></i> View
+                        </a>
+                    </td>
+
+                    <td class="project-actions text-right">
+                        <a class="btn btn-primary btn-sm" asp-action="Edit" asp-route-id="@item.Id">
+                            <i class="fas fa-pencil-alt"></i> Edit
+                        </a>
+                    </td>
+                    <td class="project-actions text-right">
+                        <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.Id">
+                            <i class="fas fa-trash"></i> Delete
+                        </a>
+                    </td>
+
+        </tr>
+}
+    </tbody>
+</table>
+
+                        <style>
+        .btn-dark-yellow {
+            background-color: #FFC000; /* Dark yellow color */
+            /* You can add more styling properties here as needed */
+        }
+
+                        </style>

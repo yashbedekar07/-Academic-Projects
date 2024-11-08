@@ -1,0 +1,75 @@
+﻿@model iCare.Models.Glass
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center custom-heading"><i class="fas fa-edit"></i> Edit Glass</h1>
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form id="editForm" asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="GlassId" />
+                <div class="form-group">
+                    <label asp-for="GlassType" class="control-label">Glass Type</label>
+                    <input asp-for="GlassType" class="form-control" />
+                    <span asp-validation-for="GlassType" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label">Description</label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i>Update</button>
+                    <a asp-action="Index" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Back to List</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel"><i class="fas fa-check-circle"></i> Success!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Your changes have been saved successfully.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#editForm').submit(function (event) {
+            event.preventDefault(); // Prevent form submission
+            $('#successModal').modal('show'); // Show success modal
+        });
+
+        // Trigger form submission after success modal is shown
+        $('#successModal').on('shown.bs.modal', function () {
+            $('#editForm').unbind('submit').submit(); // Unbind previous submit event and submit the form
+        });
+
+        // Redirect to index page after closing success modal
+        $('#successModal').on('hidden.bs.modal', function () {
+            window.location.href = '@Url.Action("Index", "GlassDetails")'; // Replace 'YourControllerName' with the actual controller name
+        });
+    });
+</script>

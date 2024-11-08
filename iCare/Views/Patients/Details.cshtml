@@ -1,0 +1,167 @@
+﻿@model iCare.Models.Patient
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - My Application</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .custom-heading {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .card {
+            margin-top: 50px;
+            border-radius: 15px;
+        }
+
+        .card-header {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .card-body {
+            font-size: 1.25rem;
+        }
+
+        .detail-item {
+            margin-bottom: 20px;
+            font-size: 1.125rem;
+        }
+
+            .detail-item .fas {
+                font-size: 1.1rem;
+            }
+
+        .media (max-width: 768px) {
+            .detail-item
+
+        {
+            font-size: 1rem;
+        }
+
+        .detail-item .fas {
+            font-size: 1.1rem;
+        }
+
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            font-size: 1.25rem;
+        }
+
+        .modal-title, .modal-body {
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="text-center custom-heading"><i class="fas fa-info-circle"></i> Patient Details</h1>
+
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-notes-medical"></i> Patient Details
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 detail-item">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-user me-3"></i> Patient Name:
+                            <div class="ml-2">@Html.DisplayFor(model => model.PatientName)</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 detail-item">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-calendar-alt me-3"></i> Date of Birth:
+                            <div class="ml-2">@Html.DisplayFor(model => model.Dob)</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 detail-item">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-venus-mars me-3"></i> Gender:
+                            <div class="ml-2">@Html.DisplayFor(model => model.Gender)</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 detail-item">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-phone me-3"></i> Mobile Number:
+                            <div class="ml-2">@Html.DisplayFor(model => model.ContactNumber)</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 detail-item">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-envelope me-3"></i> Email:
+                            <div class="ml-2">@Html.DisplayFor(model => model.Email)</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 detail-item">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-map-marker-alt me-3"></i> Address:
+                            <div class="ml-2">@Html.DisplayFor(model => model.Address)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-container">
+        <button id="editButton" class="btn btn-outline-primary btn-lg mr-3" data-toggle="modal" data-target="#confirmEditModal"><i class="fas fa-edit"></i> Edit</button>
+        <a asp-action="Index" class="btn btn-outline-secondary btn-lg"><i class="fas fa-arrow-left"></i> Back to List</a>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal fade" id="confirmEditModal" tabindex="-1" role="dialog" aria-labelledby="confirmEditModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmEditModalLabel"><i class="fas fa-exclamation-circle"></i> Confirm Edit</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to edit this patient's details?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+                    <button id="confirmEditButton" type="button" class="btn btn-outline-primary"><i class="fas fa-edit"></i> Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and jQuery scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#confirmEditButton").click(function () {
+                window.location.href = '@Url.Action("Edit", "Patients", new { id = Model.PatientId })';
+            });
+        });
+    </script>
+</body>
+</html>
