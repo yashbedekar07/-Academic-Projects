@@ -1,0 +1,14 @@
+C:\Users\Yash\source\repos\Employe\bin\Debug\net8.0\Employe.exe
+C:\Users\Yash\source\repos\Employe\bin\Debug\net8.0\Employe.deps.json
+C:\Users\Yash\source\repos\Employe\bin\Debug\net8.0\Employe.runtimeconfig.json
+C:\Users\Yash\source\repos\Employe\bin\Debug\net8.0\Employe.dll
+C:\Users\Yash\source\repos\Employe\bin\Debug\net8.0\Employe.pdb
+C:\Users\Yash\source\repos\Employe\obj\Debug\net8.0\Employe.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yash\source\repos\Employe\obj\Debug\net8.0\Employe.AssemblyInfoInputs.cache
+C:\Users\Yash\source\repos\Employe\obj\Debug\net8.0\Employe.AssemblyInfo.cs
+C:\Users\Yash\source\repos\Employe\obj\Debug\net8.0\Employe.csproj.CoreCompileInputs.cache
+C:\Users\Yash\source\repos\Employe\obj\Debug\net8.0\Employe.dll
+C:\Users\Yash\source\repos\Employe\obj\Debug\net8.0\refint\Employe.dll
+C:\Users\Yash\source\repos\Employe\obj\Debug\net8.0\Employe.pdb
+C:\Users\Yash\source\repos\Employe\obj\Debug\net8.0\Employe.genruntimeconfig.cache
+C:\Users\Yash\source\repos\Employe\obj\Debug\net8.0\ref\Employe.dll
